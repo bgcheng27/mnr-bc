@@ -1,10 +1,8 @@
-import { createRoot } from "react-dom/client"
+import { createRoot } from "react-dom/client";
 
-const App = () => {
-    return <h1>Hello World</h1>;
-}
+import App from "./components/App"
 
 const container = document.getElementById("app");
 const root = createRoot(container);
 
-root.render(<App />);
+root.render(<App initialData={{ contests: (window as any).initialData }} />);
